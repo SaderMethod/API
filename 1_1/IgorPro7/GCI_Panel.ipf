@@ -261,7 +261,7 @@ Function GCI_RequestLeverList()
 
 	String Request = CGI_RequestLeverListStr()
 
-	URLRequest /DSTR=Request url="https://sadermethod.org/api.php", method=post, headers="Content-Type: text/xml"
+	URLRequest /DSTR=Request url="https://sadermethod.org/api/1.1/api.php", method=post, headers="Content-Type: text/xml"
 	Output = S_serverResponse
 		
 	if (GCI_ErrorCheck(v_flag) == 0)
@@ -285,7 +285,7 @@ Function GCI_RequestData()
 
 		String Request = CGI_RequestDataStr()
 	
-		URLRequest /DSTR=Request url="https://sadermethod.org/api.php", method=post, headers="Content-Type: text/xml"
+		URLRequest /DSTR=Request url="https://sadermethod.org/api/1.1/api.php", method=post, headers="Content-Type: text/xml"
 		Output = S_serverResponse
 		
 		if (GCI_ErrorCheck(v_flag) == 0)

@@ -261,7 +261,7 @@ Function GCI_RequestLeverList()
 
 	String Request = CGI_RequestLeverListStr()
 
-	easyHttp /POST=Request "http://sadermethod.org/api.php", Output
+	easyHttp /POST=Request "http://sadermethod.org/api/1.1/api.php", Output
 		
 	if (GCI_ErrorCheck(v_flag) == 0)
 		LeverIDs = GCI_GetList("id")
@@ -284,7 +284,7 @@ Function GCI_RequestData()
 
 		String Request = CGI_RequestDataStr()
 	
-		easyHttp /POST=Request "http://sadermethod.org/api.php", Output
+		easyHttp /POST=Request "http://sadermethod.org/api/1.1/api.php", Output
 		
 		if (GCI_ErrorCheck(v_flag) == 0)
 			GCI_UpdateTable()

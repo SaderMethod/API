@@ -9,7 +9,7 @@ def SaderGCI_GetLeverList( UserName, Password ):
       <operation>LIST</operation>
     </saderrequest>'''
     headers = {'user-agent': 'Python API/0.1'}
-    r = requests.post('https://test.sadermethod.corpita.net/api.php', data=payload, headers=headers)
+    r = requests.post('https://test.sadermethod.corpita.net/api/1.1/api.php', data=payload, headers=headers)
     doc = etree.fromstring(r.content)
 
     cantilever_ids = doc.findall('./cantilevers/cantilever/id')
@@ -31,7 +31,7 @@ def SaderGCI_CalculateK( UserName, Password, LeverNumber, Frequency, QFactor ):
         </cantilever>
     </saderrequest>'''
     headers = {'user-agent': 'Python API/0.1'}
-    r = requests.post('https://test.sadermethod.corpita.net/api.php', data=payload, headers=headers)
+    r = requests.post('https://test.sadermethod.corpita.net/api/1.1/api.php', data=payload, headers=headers)
     print (r.text)
     doc = etree.fromstring(r.content)
     if (doc.find('./status/code').text == 'OK'):
@@ -52,7 +52,7 @@ def SaderGCI_CalculateAndUploadK( UserName, Password, LeverNumber, Frequency, QF
         </cantilever>
     </saderrequest>'''
     headers = {'user-agent': 'Python API/0.1'}
-    r = requests.post('https://test.sadermethod.corpita.net/api.php', data=payload, headers=headers)
+    r = requests.post('https://test.sadermethod.corpita.net/api/1.1/api.php', data=payload, headers=headers)
     print (r.text)
     doc = etree.fromstring(r.content)
     if (doc.find('./status/code').text == 'OK'):

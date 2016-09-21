@@ -15,7 +15,7 @@ We hope that this new development helps to facilitate the worldwide standardisat
 
 Enter your username and password for the Sader Method GCI (sadermethod.org), and press Enter, to enable the GCI Panel.
 
-![Initial Interface](../Docs/Images/AsylumAPIv0.93_Initial.png)
+![Initial Interface](1_1/Docs/Images/AsylumAPIv0.93_Initial.png)
 
 Thermal frequency, quality factor and spring constant in the GCI Panel are taken directly from the Thermal Panel in the Asylum Research AFM Software.
 
@@ -27,7 +27,7 @@ Thermal frequency, quality factor and spring constant in the GCI Panel are taken
 * Select your Lever from the pull down menu and press ‘Upload & Calculate’.
 * The frequency, quality factor and spring constant are merged with the GCI database. The Sader Method gives a new calculation of your spring constant and its uncertainty.
 
-![Initial Interface](../Docs/Images/AsylumAPIv0.93_Approach1.png)
+![Initial Interface](1_1/Docs/Images/AsylumAPIv0.93_Approach1.png)
 
 ##Approach 2:
 * Measure and fit a Thermal only (InvOLS not required).
@@ -35,7 +35,7 @@ Thermal frequency, quality factor and spring constant in the GCI Panel are taken
 * Select your Lever from the pull down menu and press ‘Calculate’.
 * Only the frequency and quality factor are sent to the GCI. The Sader Method uses the existing database to calculate your spring constant and its uncertainty.
 
-![Initial Interface](../Docs/Images/AsylumAPIv0.93_Approach2.png)
+![Initial Interface](1_1/Docs/Images/AsylumAPIv0.93_Approach2.png)
 
 _Approach 1 lets users contribute their data to the international database, and compares their calibration measurements to those of others - letting users help each other and providing a global reference point for AFM force measurements._
 

@@ -8,7 +8,7 @@ access its worldwide database - while using the standard Thermal Tune of the Asy
 ##Installation:
 
 1. Close Igor Pro
-2. Copy GCI_Panel.ipf (attached) to:
+2. Copy [GCI_Panel.ipf](GCI_Panel.ipf) to:
  * Igor Pro\AsylumResearch\Code3D\UserIncludes  (Create the UserIncludes folder if it is missing on your system)
 3. Start Asylum Research Software
 4. ‘Sader Method GCI’ will now be a menu item - click and select ‘GCI Panel’ to open.

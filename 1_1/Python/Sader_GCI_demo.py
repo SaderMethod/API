@@ -1,6 +1,10 @@
 import requests
 import xml.etree.ElementTree as etree
 
+Version = 'Python API/0.1'
+url = 'https://v011.sadermethod.org/api/1.1/api.php'
+
+
 def SaderGCI_GetLeverList( UserName, Password ):
     payload = '''<?xml version="1.0" encoding="UTF-8" ?>
     <saderrequest>
@@ -8,10 +12,10 @@ def SaderGCI_GetLeverList( UserName, Password ):
       <password>'''+Password+'''</password>
       <operation>LIST</operation>
     </saderrequest>'''
-    headers = {'user-agent': 'Python API/0.1'}
-    r = requests.post('https://test.sadermethod.corpita.net/api/1.1/api.php', data=payload, headers=headers)
+    headers = {'user-agent': Version}
+    r = requests.post(url, data=payload, headers=headers)
     doc = etree.fromstring(r.content)
-
+    
     cantilever_ids = doc.findall('./cantilevers/cantilever/id')
     cantilever_labels = doc.findall('./cantilevers/cantilever/label')
 
@@ -30,8 +34,8 @@ def SaderGCI_CalculateK( UserName, Password, LeverNumber, Frequency, QFactor ):
             <quality>'''+str(QFactor)+'''</quality>
         </cantilever>
     </saderrequest>'''
-    headers = {'user-agent': 'Python API/0.1'}
-    r = requests.post('https://test.sadermethod.corpita.net/api/1.1/api.php', data=payload, headers=headers)
+    headers = {'user-agent': Version}
+    r = requests.post(url, data=payload, headers=headers)
     print (r.text)
     doc = etree.fromstring(r.content)
     if (doc.find('./status/code').text == 'OK'):
@@ -48,11 +52,11 @@ def SaderGCI_CalculateAndUploadK( UserName, Password, LeverNumber, Frequency, QF
             <frequency>'''+str(Frequency)+'''</frequency>
             <quality>'''+str(QFactor)+'''</quality>
             <constant>'''+str(SpringK)+'''</constant>
-            <comment>Python API v0.1</comment>
+            <comment>'''+Version+'''</comment>
         </cantilever>
     </saderrequest>'''
-    headers = {'user-agent': 'Python API/0.1'}
-    r = requests.post('https://test.sadermethod.corpita.net/api/1.1/api.php', data=payload, headers=headers)
+    headers = {'user-agent': Version}
+    r = requests.post(url, data=payload, headers=headers)
     print (r.text)
     doc = etree.fromstring(r.content)
     if (doc.find('./status/code').text == 'OK'):

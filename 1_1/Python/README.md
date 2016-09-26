@@ -3,6 +3,12 @@
 This is a proof of concept code (with 3 basic functions) which will allow you to implement in your Python based software.
 See the Asylum Research (IgorPro6 or IgorPro7) for an example of a full functionality implementation.
 
+**For Development**
+Please use https://v011.sadermethod.org/api/1.1/api.php. You will need to register online at https://v011.sadermethod.org. 
+
+**For Production**
+Please use https://sadermethod.org/api/1.1/api.php. You will need to register online at https://sadermethod.org. 
+
 **Function 1:**
 `SaderGCI_GetLeverList(UserName, Password)`
 

@@ -9,7 +9,7 @@ access its worldwide database - while using the standard Thermal Tune of the Asy
 
 1. Close Igor Pro
 2. Download EasyHTTP at:
- * http://www.igorexchange.com/project_download/files/projects/easyHttp-IGOR.5.00.x-1.x-dev.zip
+ * https://www.wavemetrics.com/sites/www.wavemetrics.com/files/documents-imported/easyHttp-IGOR.5.00.x-1.x-dev.zip
 3. Extract and install easyHTTP (instructions and installer in zip file)
 4. Copy [GCI_Panel.ipf](GCI_Panel.ipf) to:
  * Igor Pro\AsylumResearch\Code3D\UserIncludes  (Create the UserIncludes folder if it is missing on your system)

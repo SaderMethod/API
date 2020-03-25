@@ -2,7 +2,8 @@ import requests
 import xml.etree.ElementTree as etree
 
 Version = 'Python API/0.1'
-url = 'https://v011.sadermethod.org/api/1.1/api.php'
+Type = 'text/xml'
+url = 'https://sadermethod.org/api/1.1/api.php'
 
 
 def SaderGCI_GetLeverList( UserName, Password ):
@@ -12,7 +13,7 @@ def SaderGCI_GetLeverList( UserName, Password ):
       <password>'''+Password+'''</password>
       <operation>LIST</operation>
     </saderrequest>'''
-    headers = {'user-agent': Version}
+    headers = {'user-agent': Version, 'Content-type': Type}
     r = requests.post(url, data=payload, headers=headers)
     doc = etree.fromstring(r.content)
     
@@ -22,6 +23,7 @@ def SaderGCI_GetLeverList( UserName, Password ):
     for a in range(len(cantilever_ids)):
         print (cantilever_labels[a].text,cantilever_ids[a].text.replace('data_','(')+')')
 
+        
 def SaderGCI_CalculateK( UserName, Password, LeverNumber, Frequency, QFactor ):
     payload = '''<?xml version="1.0" encoding="UTF-8" ?>
     <saderrequest>
@@ -34,13 +36,14 @@ def SaderGCI_CalculateK( UserName, Password, LeverNumber, Frequency, QFactor ):
             <quality>'''+str(QFactor)+'''</quality>
         </cantilever>
     </saderrequest>'''
-    headers = {'user-agent': Version}
+    headers = {'user-agent': Version, 'Content-type': Type}
     r = requests.post(url, data=payload, headers=headers)
     print (r.text)
     doc = etree.fromstring(r.content)
     if (doc.find('./status/code').text == 'OK'):
         print ("Sader GCI Spring Constant = "+doc.find('./cantilever/k_sader').text+', 95% C.I. Error = '+doc.find('./cantilever/percent').text+'% from '+doc.find('./cantilever/samples').text+' samples.')
 
+        
 def SaderGCI_CalculateAndUploadK( UserName, Password, LeverNumber, Frequency, QFactor, SpringK ):
     payload = '''<?xml version="1.0" encoding="UTF-8" ?>
     <saderrequest>
@@ -55,7 +58,7 @@ def SaderGCI_CalculateAndUploadK( UserName, Password, LeverNumber, Frequency, QF
             <comment>'''+Version+'''</comment>
         </cantilever>
     </saderrequest>'''
-    headers = {'user-agent': Version}
+    headers = {'user-agent': Version, 'Content-type': Type}
     r = requests.post(url, data=payload, headers=headers)
     print (r.text)
     doc = etree.fromstring(r.content)

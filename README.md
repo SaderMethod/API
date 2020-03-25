@@ -47,5 +47,5 @@ _Approach 1 lets users contribute their data to the international database, and 
 
 **NOTE: Take measurements of the fundamental flexural mode in air. The GCI reports the static normal spring constant at the imaging tip position.**
 
-Reference: [Sader et al., arXiv:1605.07750 (2016).](https://arxiv.org/abs/1605.07750)
+Reference: [Sader et al., Review of Scientific Instruments, 87, 093711 (2016).](http://scitation.aip.org/content/aip/journal/rsi/87/9/10.1063/1.4962866)
 

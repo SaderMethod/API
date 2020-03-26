@@ -1,7 +1,7 @@
 import requests
 import xml.etree.ElementTree as etree
 
-Version = 'Python API/0.1'
+Version = 'Python API/0.11'
 Type = 'text/xml'
 url = 'https://sadermethod.org/api/1.1/api.php'
 

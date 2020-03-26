@@ -1,6 +1,6 @@
 # Version 0.10 - Sader Method API Version 1.1
 
-This is a proof of concept code (with 3 basic functions) which will allow you to implement in your Python based software.
+This is a proof of concept code (with 3 basic functions) which will allow you to implement in your Julia based software.
 See the Asylum Research (IgorPro6 or IgorPro7) for an example of a full functionality implementation.
 
 **For Development**

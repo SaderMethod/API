@@ -1,6 +1,6 @@
 #pragma rtGlobals=3		// Use modern global access method and strict wave access.
 
-// Version 0.93
+// Version 1.10
 //
 // Requires the EasyHttp XOP installed
 //
@@ -37,7 +37,7 @@
 ////////          			Constants          													///////// 
 /////////////////////////////////////////////////////////////////////////////////////////////
 
-	static strconstant Version			=	"V0.93"
+	static strconstant Version			=	"V1.10"
  
 	static strconstant cUVW             =	"root:packages:MFP3D:Main:Variables:UserVariablesWave" 
 	static strconstant cUVD             =	"root:packages:MFP3D:Main:Variables:UserVariablesDescription" 
@@ -343,7 +343,7 @@ Function/S CGI_RequestDataStr()
 	Request += "    <quality>"+num2str(Var[%GCI_QF][0])+"</quality>\r"
 	if (Var[%GCI_UploadK][0])
 		Request += "    <constant>"+num2str(Var[%GCI_Thermalk][0])+"</constant>\r"
-		Request += "    <comment>Asylum API "+Version+"</comment>\r"
+		Request += "    <comment>Igor API "+Version+"</comment>\r"
 	endif
 	Request += "  </cantilever>\r"
 	Request += "</saderrequest>"

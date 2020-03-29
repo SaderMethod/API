@@ -5,7 +5,7 @@ We have developed an API interface that lets you seamlessly use the Global Calib
 
 At the moment we have a full implementation compatible with Asylum Research systems where you can effortlessly access and/or upload data to the GCI and access its worldwide database - while using the standard Thermal Tune of the Asylum AFM.
 
-We plan on adding support for other AFM's in the near future with your help. For now we have provided examples in Python and Julia. These should allow you to add access to the GCI to most platforms. If you have requests for other languages or would like to contribute to this project please let us know.
+We have also provided examples in Python and Julia. These should allow you to add access to the GCI to most platforms. If you have requests for other languages or would like to contribute to this project please let us know.
 
 Please email feedback (quoting version number and AFM type):  support@sadermethod.org
 

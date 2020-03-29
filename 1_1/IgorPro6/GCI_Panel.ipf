@@ -6,7 +6,7 @@
 //
 // MIT License
 //
-// Copyright (c) 2016 John Sader and Jason Kilpatrick
+// Copyright (c) 2016 - 2020 John Sader and Jason Kilpatrick
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -466,7 +466,7 @@ Function GCI_Status()
 	Status = ""
 
 	if (Var[%GCI_UploadK][0] == 0)
-		Status += "Approach 2: Only the frequency and quality factor are sent to\rthe GCI. The Sader Method uses the existing database to\rcalculate your spring constant and its uncertainty."
+		Status += "Approach 2: Only the frequency and quality factor are sent to\rthe GCI.Â The Sader Method uses the existing database to\rcalculate your spring constant and its uncertainty."
 		Button GCI_Upload title="Calculate",win=GCIPanel
 		SetVariable GCI_ThermalK valueBackColor=(65280,16384,16384),win=GCIPanel
 	else
